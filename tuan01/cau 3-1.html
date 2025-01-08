@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+</head>
+<body>
+  <h1>Weather Forecast</h1>
+  <script>
+    let forecast = [];
+    function printForecast(arr) {
+      
+      for (let i = 0; i < arr.length; i++) {
+        forecast.push(`${arr[i]}ºC in ${i + 1} days`);
+      }
+    }
+ 
+    printForecast([17, 21, 23])
+      
+     console.log(
+       '... ' + forecast.join(' ... ') + ' ...'
+     );
+
+     forecast = [];
+     printForecast([12, 5, -5, 0, 4])
+
+    console.log(
+      '\n... ' + forecast.join(' ... ') + ' ...'
+    );
+ </script>
+</body>
+</html>
