@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Tính tiền tip</h2>
+<p id="result"></p>
+
+<script>
+
+function calculateTip(bill) {
+    const tip = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+    return tip;
+}
+
+let bill = parseFloat(prompt("Nhập tiền:"));
+
+let tip = calculateTip(bill);
+
+let total = bill + tip;
+
+console.log(`Tiền của bạn là ${bill.toFixed(2)}, tiền típ ${tip.toFixed(2)}, tổng tiền ${total.toFixed(2)}.`);
+</script>
+</body>
+</html>
