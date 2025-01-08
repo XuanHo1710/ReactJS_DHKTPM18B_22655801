@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Gymnastics Teams</h2>
+<p id="result"></p>
+<script>
+  // Test Data
+  const dolphinsScores1 = [96, 108, 89];
+  const koalasScores1 = [88, 91, 110];
+
+  const dolphinsScoresBonus1 = [97, 112, 101];
+  const koalasScoresBonus1 = [109, 95, 123];
+
+  const dolphinsScoresBonus2 = [97, 112, 101];
+  const koalasScoresBonus2 = [109, 95, 106];
+
+  const calcAverage = scores => scores.reduce((a, b) => a + b, 0) / scores.length;
+
+  const determineWinner = (dolphinsScores, koalasScores) => {
+    const avgDolphins = calcAverage(dolphinsScores);
+    const avgKoalas = calcAverage(koalasScores);
+
+    if (avgDolphins >= 100 || avgKoalas >= 100) {
+      if (avgDolphins > avgKoalas && avgDolphins >= 100) {
+        return `Dolphins win with an average score of ${avgDolphins.toFixed(2)}!`;
+      } else if (avgKoalas > avgDolphins && avgKoalas >= 100) {
+        return `Koalas win with an average score of ${avgKoalas.toFixed(2)}!`;
+      } else if (avgDolphins === avgKoalas && avgDolphins >= 100) {
+        return `It's a draw with both teams scoring ${avgDolphins.toFixed(2)}!`;
+      } else {
+        return `No team wins as scores are below the minimum of 100.`;
+      }
+    } else {
+      return `No team wins as neither team reached the minimum score of 100.`;
+    }
+  };
+
+  const result = determineWinner(dolphinsScoresBonus2, koalasScoresBonus2);
+
+  console.log(result);
+  
+</script>
+</body>
+</html>
