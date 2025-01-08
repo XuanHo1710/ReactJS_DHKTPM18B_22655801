@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Lesson 1</h2>
+<p id="demo"></p>
+<script>
+
+let markMass = parseFloat(prompt("Nhập khối lượng của Mark (kg):"));
+let markHeight = parseFloat(prompt("Nhập chiều cao của Mark (m):"));
+let johnMass = parseFloat(prompt("Nhập khối lượng của John (kg):"));
+let johnHeight = parseFloat(prompt("Nhập chiều cao của John (m):"));
+let markBMI = markMass / (markHeight ** 2);let johnBMI = johnMass / (johnHeight ** 2);
+let markHigherBMI = markBMI > johnBMI;
+
+
+if (markHigherBMI)
+    console.log("Mark's BMI is higher than John's!")
+else console.log("John's BMI is higher than Mark's!")
+
+  </script>
+</body>
+</html>
